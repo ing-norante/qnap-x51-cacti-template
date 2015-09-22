@@ -14,11 +14,10 @@
 #   crontab /etc/config/crontab
 #
 
-PWD ="cactipoller"
 
 # Avoid crontab collision with Cacti's per-minute poller
 sleep 50
 # Assumes SNMP settings, change if needed
-/opt/bin/snmpget -v 3 -a MD5 -A $PWD -l authNoPriv -t 6 -u cactipoller localhost .1.3.6.1.4.1.24681.1.2.1.0 |cut -d\" -f2 | cut -d' ' -f1 |awk '{ printf($1) }' >/tmp/systemcpu.cacti
+/Apps/opt/bin/snmpget -v 3 -a MD5 -A cactipoller -l authNoPriv -t 6 -u cactipoller localhost .1.3.6.1.4.1.24681.1.2.1.0 |cut -d\" -f2 | cut -d' ' -f1 |awk '{ printf($1) }' >/tmp/systemcpu.cacti
 
 exit 0

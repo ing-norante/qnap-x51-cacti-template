@@ -10,11 +10,10 @@
 #
 #########################################################################
 
-BC_PATH="/opt/bin/bc"
-PWD="cactipoller"
+BC_PATH="/Apps/opt/bin/bc"
 
-hdtotalsize=`/opt/bin/snmpget -v 3 -a MD5 -A $PWD -l authNoPriv -u cactipoller localhost .1.3.6.1.4.1.24681.1.2.17.1.4.1 |cut -d\" -f2 | cut -d' ' -f1 |awk '{ printf($1) }'`
-hdfreesize_snmp=`/opt/bin/snmpget -v 3 -a MD5 -A $PWD -l authNoPriv -u cactipoller localhost .1.3.6.1.4.1.24681.1.2.17.1.5.1`
+hdtotalsize=`/Apps/opt/bin/snmpget -v 3 -a MD5 -A cactipoller -l authNoPriv -u cactipoller localhost .1.3.6.1.4.1.24681.1.2.17.1.4.1 |cut -d\" -f2 | cut -d' ' -f1 |awk '{ printf($1) }'`
+hdfreesize_snmp=`/Apps/opt/bin/snmpget -v 3 -a MD5 -A cactipoller -l authNoPriv -u cactipoller localhost .1.3.6.1.4.1.24681.1.2.17.1.5.1`
 
 # First assign free size based on the assumption TB
 hdfreesize=`echo $hdfreesize_snmp |cut -d\" -f2 | cut -d' ' -f1 |awk '{ printf($1) }'`
