@@ -1,0 +1,136 @@
+<cacti>	
+	<hash_0100242115d7d718ccc250c166c2e67666b3c3>
+		<name>Bandwidth measurement: Speedtest.net</name>
+		<ds>
+			<t_name>on</t_name>
+			<name>Bandwidth measurement</name>
+			<data_input_id>hash_030024cef8560adde8828114f99c440d20af7c</data_input_id>
+			<t_rra_id></t_rra_id>
+			<t_rrd_step>on</t_rrd_step>
+			<rrd_step>300</rrd_step>
+			<t_active>on</t_active>
+			<active>on</active>
+			<rra_items>hash_150024c21df5178e5c955013591239eb0afd46|hash_1500240d9c0af8b8acdc7807943937b3208e29|hash_1500246fc2d038fb42950138b0ce3e9874cc60|hash_150024e36f3adb9f152adfa5dc50fd2b23337e|hash_150024283ea2bf1634d92ce081ec82a634f513</rra_items>
+		</ds>
+		<items>
+			<hash_080024ff130a02b15f21484bcc3e998bf0880b>
+				<t_data_source_name>on</t_data_source_name>
+				<data_source_name>Ping</data_source_name>
+				<t_rrd_minimum>on</t_rrd_minimum>
+				<rrd_minimum>0</rrd_minimum>
+				<t_rrd_maximum>on</t_rrd_maximum>
+				<rrd_maximum>1000</rrd_maximum>
+				<t_data_source_type_id>on</t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat>on</t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id>on</t_data_input_field_id>
+				<data_input_field_id>hash_07002433b1bc8d7b3ca563d37e781cd73802aa</data_input_field_id>
+			</hash_080024ff130a02b15f21484bcc3e998bf0880b>
+			<hash_0800248e55e61dd2d5aa70ab5fc8254687e1ab>
+				<t_data_source_name>on</t_data_source_name>
+				<data_source_name>Download</data_source_name>
+				<t_rrd_minimum>on</t_rrd_minimum>
+				<rrd_minimum>0</rrd_minimum>
+				<t_rrd_maximum>on</t_rrd_maximum>
+				<rrd_maximum>1000</rrd_maximum>
+				<t_data_source_type_id>on</t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat>on</t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id>on</t_data_input_field_id>
+				<data_input_field_id>hash_070024803f115e6c6a632482a5e7728b400be9</data_input_field_id>
+			</hash_0800248e55e61dd2d5aa70ab5fc8254687e1ab>
+			<hash_0800242d3022c7074da307957681801fc80004>
+				<t_data_source_name>on</t_data_source_name>
+				<data_source_name>Upload</data_source_name>
+				<t_rrd_minimum>on</t_rrd_minimum>
+				<rrd_minimum>0</rrd_minimum>
+				<t_rrd_maximum>on</t_rrd_maximum>
+				<rrd_maximum>1000</rrd_maximum>
+				<t_data_source_type_id>on</t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat>on</t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id>on</t_data_input_field_id>
+				<data_input_field_id>hash_070024743deaccd996218f654dbc8f6b807835</data_input_field_id>
+			</hash_0800242d3022c7074da307957681801fc80004>
+		</items>
+		<data>
+		</data>
+	</hash_0100242115d7d718ccc250c166c2e67666b3c3>
+	<hash_030024cef8560adde8828114f99c440d20af7c>
+		<name>SpeedTest script</name>
+		<type_id>1</type_id>
+		<input_string>/usr/local/share/cacti/scripts/speedtest.sh </input_string>
+		<fields>
+			<hash_07002433b1bc8d7b3ca563d37e781cd73802aa>
+				<name>ping (in ms)</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>Ping</data_name>
+			</hash_07002433b1bc8d7b3ca563d37e781cd73802aa>
+			<hash_070024803f115e6c6a632482a5e7728b400be9>
+				<name>download</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>Download</data_name>
+			</hash_070024803f115e6c6a632482a5e7728b400be9>
+			<hash_070024743deaccd996218f654dbc8f6b807835>
+				<name>upload</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>Upload</data_name>
+			</hash_070024743deaccd996218f654dbc8f6b807835>
+		</fields>
+	</hash_030024cef8560adde8828114f99c440d20af7c>
+	<hash_150024c21df5178e5c955013591239eb0afd46>
+		<name>Daily (5 Minute Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>1</steps>
+		<rows>600</rows>
+		<timespan>86400</timespan>
+		<cf_items>1|2|3|4</cf_items>
+	</hash_150024c21df5178e5c955013591239eb0afd46>
+	<hash_1500240d9c0af8b8acdc7807943937b3208e29>
+		<name>Weekly (30 Minute Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>6</steps>
+		<rows>700</rows>
+		<timespan>604800</timespan>
+		<cf_items>1|2|3|4</cf_items>
+	</hash_1500240d9c0af8b8acdc7807943937b3208e29>
+	<hash_1500246fc2d038fb42950138b0ce3e9874cc60>
+		<name>Monthly (2 Hour Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>24</steps>
+		<rows>775</rows>
+		<timespan>2678400</timespan>
+		<cf_items>1|2|3|4</cf_items>
+	</hash_1500246fc2d038fb42950138b0ce3e9874cc60>
+	<hash_150024e36f3adb9f152adfa5dc50fd2b23337e>
+		<name>Yearly (1 Day Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>288</steps>
+		<rows>797</rows>
+		<timespan>33053184</timespan>
+		<cf_items>1|2|3|4</cf_items>
+	</hash_150024e36f3adb9f152adfa5dc50fd2b23337e>
+	<hash_150024283ea2bf1634d92ce081ec82a634f513>
+		<name>Hourly (1 Minute Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>1</steps>
+		<rows>500</rows>
+		<timespan>14400</timespan>
+		<cf_items>1|3</cf_items>
+	</hash_150024283ea2bf1634d92ce081ec82a634f513>
+</cacti>
